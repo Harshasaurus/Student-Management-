@@ -1,2 +1,1 @@
-// Replace this URL with the deployed Render API URL before deploying the frontend.
-window.API_URL = 'http://localhost:5000/api';
+window.API_URL = 'https://student-api-harshal-2026.onrender.com/api';
