@@ -14,8 +14,9 @@ The frontend uses `http://localhost:5000/api` by default. For deployment, set `w
 
 ## Deploy
 
-- Deploy `backend` as a Render Node web service with build command `npm install`, start command `npm start`, and `MONGODB_URI`, `PORT`, and `FRONTEND_URL` environment variables.
-- Deploy `frontend` as a Netlify static site. Set the frontend API URL to the Render service URL.
+- Deploy `backend` as a Render Node web service with build command `npm install`, start command `npm start`, and `MONGODB_URI`, `PORT`, and `FRONTEND_URL` environment variables. The included `render.yaml` can be used as a Blueprint.
+- Deploy `frontend` as a Netlify static site using the repository root. The included `netlify.toml` publishes the `frontend` directory.
+- After Render creates the API URL, replace the value in `frontend/config.js` with `https://your-api.onrender.com/api`, commit, and push the change. Set the same Netlify URL in Render's `FRONTEND_URL` environment variable.
 - In MongoDB Atlas, allow the Render service to connect and create the `studentDB` database with the `students` collection.
 
 Never commit `.env` or real database credentials.
