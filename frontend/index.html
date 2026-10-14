@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Information Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header><p class="eyebrow">Three-tier cloud application</p><h1>Student records</h1><p class="muted">Manage students through the Render API and MongoDB Atlas.</p></header>
+    <section class="card">
+      <h2 id="form-title">Add student</h2>
+      <form id="student-form">
+        <input id="studentId" placeholder="Student ID (e.g. ST101)" required>
+        <input id="name" placeholder="Full name" required>
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="department" placeholder="Department" required>
+        <input id="semester" type="number" min="1" max="12" placeholder="Semester" required>
+        <input id="contact" placeholder="Contact number">
+        <div><button type="submit">Save student</button><button type="button" id="cancel" class="secondary hidden">Cancel</button></div>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+    <section class="card"><div class="toolbar"><h2>Students</h2><input id="search" placeholder="Search by ID or name"></div><div id="students" class="table-wrap"></div></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

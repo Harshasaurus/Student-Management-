@@ -1,0 +1,4 @@
+.idea/
+*.iml
+backend/.env
+backend/node_modules/
